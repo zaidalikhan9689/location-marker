@@ -60,7 +60,7 @@ function App() {
       icon: "warning",
       dangerMode: true,
       closeOnClickOutside: false,
-      buttons: ["Cancel", { text: "Delete Product", closeModal: false }],
+      buttons: ["Cancel", { text: "Delete Location", closeModal: false }],
     }).then(async (willDelete) => {
       if (willDelete) {
         try {
@@ -69,7 +69,7 @@ function App() {
             data: JSON.stringify({ id }),
             method: "DELETE",
           });
-          toast.success("Product deleted successfully.");
+          toast.success("Location deleted successfully.");
           refetch();
         } catch (error) {
           toast.success("Error occured!.");
